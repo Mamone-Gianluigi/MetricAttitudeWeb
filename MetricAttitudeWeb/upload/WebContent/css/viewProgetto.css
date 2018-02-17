@@ -1,0 +1,163 @@
+@CHARSET "ISO-8859-1";/*
+CSS Credit: http://www.templatemo.com/
+*/
+
+			html, body {
+						background-color: #000000;
+						height:100%; 
+					   }
+			body {
+					background-color:#202020; 
+					margin:0; 
+				 }
+			
+			#colonna0	{
+				padding:5px;
+				height:30px;;  			
+				margin-top:5px;
+				margin-bottom:0px;
+				margin-left:10px;
+				margin-right:10px;
+			 	width:98%; 
+				background:#708090; 
+				 			
+			}
+			
+			#colonnaSinistra	{
+				min-height:103.5%;  			
+				margin-top:10px;
+				margin-bottom:10px;
+				margin-left:10px;
+				margin-right:5px;
+			 	width:26%; 
+			/* 	max-width:50%;
+			 	overflow: auto;
+    resize: horizontal;*/
+				background:#708090; 
+				border:3px solid white; 			
+			}
+						
+							#riga0	{
+							
+							min-height:5%;  
+							margin-top:10px;
+							padding:5px;
+							margin-left:5px;
+							margin-right:10px;
+							width:72%; 
+							background:#708090; 
+							border:3px solid white; 
+							border-width:3px 3px 0 3px;
+							
+						}
+						
+						
+		#riga1	{
+							
+							min-height:43%;  
+							max-height:70%;
+							overflow: auto;
+    						resize: vertical;
+							margin-bottom:4px;
+							margin-left:5px;
+							margin-right:10px;
+							width:72%; 
+							background:#708090; 
+							border:3px solid white; 
+							
+						}
+						
+		#myDiagramDiv{
+			min-height:43%; 
+					max-height:100%;
+    				
+    				overflow: auto;
+    				resize: vertical;
+		
+		}				
+						
+		#riga55	{
+							
+							min-height:8%;  
+							margin-top:-6px;
+							margin-bottom:-16px;
+							padding:5px;
+							margin-left:5px;
+							margin-right:10px;
+							width:72%; 
+							background:#708090; 
+							border:3px solid white; 
+							border-width:3px 3px 0 3px;
+							
+						}
+		
+						
+		#riga2	{
+							min-height:43%;  
+								margin-top:4px;
+							margin-bottom:10px;
+							margin-left:5px;
+							margin-right:10px;
+							width:72%; 
+							background-color:#708090; 
+							border:3px solid white; 
+							
+						}
+		 #codeArea	{
+							min-height:400px;
+							margin: 10px;
+							
+						}
+		 #codeAreaPre	{
+							height:326px;  
+							margin-top: 10px;
+							
+						}
+							
+						
+						
+			#ajax	{
+						color:black;
+							
+						}
+						
+			#myDiagramDiv{
+					width:101.6%; 
+					border: 1px solid #fff; 
+				
+					height:330px;  
+					background-color: #463E3F;
+					margin-top:5px;
+					margin-bottom:5px;
+					margin-left:-9px;
+					margin-right:-10px;
+			
+			}
+				#myDiagramDiv2{
+					width:101.6%; 
+					border: 1px solid #fff; 
+				
+					height:330px;  
+					background-color: #463E3F;
+					margin-top:5px;
+					margin-bottom:5px;
+					margin-left:-9px;
+					margin-right:-10px;
+			
+			}
+						
+			#iagramDiv{
+					width:100%; 
+					border: 2px solid #fff; 
+					border-radius: 15px 90px; 
+					height:330px;  
+					background-color: #463E3F;
+					margin-top:5px;
+					margin-bottom:5px;
+					margin-left:5px;
+			
+			}
+			
+		
+		
+		

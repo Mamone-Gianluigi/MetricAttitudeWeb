@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="ISO-8859-1">
+		<title>MetricAttitude web</title>
+		<link href="./css/FileCSS.css" rel="stylesheet" type="text/css" />
+		
+			
+
+
+
+</head>
+<body onload="flags()">
+	
+	
+	
+
+	<div id="templatemo_header_panel">
+    
+    	<div id="templatemo_site_title">
+        	<h1>MetricAttitude <span>web</span></h1><br>
+            <h2>Scan your Java project with MetricAttitude!!!</h2>
+        </div>   
+    </div> 
+    
+  
+    <br><br><br><br><br>
+    
+    <div id="templatemo_content">
+    	<div id="alr" hidden>
+  			<strong>Success!</strong> Indicates a successful or positive action.
+		</div>
+        <div id="templatemo_content_left">
+        	<h1>Benvenuto in MetricAttitude web</h1>
+            <p> MetricAttitude web ti permette di caricare i tuoi progetti e ottenere le
+            	gerarchie degli stessi. I progetti che carichi sono disponibili nella 
+            	tua lista dei progetti e puoi gestirli dall'apposita pagina.
+            	Le gerarchie vengono fornite sotto forma di grafi diretti.</p>
+            <br>
+            <p>Allega qui sotto i tuoi progetti compressi(.zip) ed ottieni le gerarchie!</p>
+            
+            <div class="cleaner_with_height">&nbsp;</div>
+            
+           
+            
+            <div class="cleaner"></div>   
+				<form enctype="multipart/form-data" name="form" action="up" onsubmit="return validateForm()" method="post">
+				&nbsp &nbsp &nbsp <b>Nuovo file in upload --> </b><input name="userfile" id="userfile" type="file">
+				<input type="submit" name="submit" id="searchbutton" value="" />
+				<br><br><br><br>
+				&nbsp &nbsp &nbsp <b>Lista dei tuoi progetti --> </b><input type="button" onclick="window.location='/upload/listaProgetti.jsp'" name="lista" id="searchbutton" value="" />
+				<br><br><br>
+				</form>
+			</div>
+			<br><br><br>
+			
+				
+        </div> <!-- end of content left -->
+        
+    </div>
+
+<div id="templatemo_footer">
+        
+        Copyright © 2017 <a><strong>Fabio Esposito</strong></a> | Designed and developed by Fabio Esposito
+    </div> <!-- end of footer -->
+    
+    
+</body>
+<script>
+function validateForm() {
+	var fullPath = document.getElementById('userfile').value;
+	if (fullPath) {
+	    var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+	    var filename = fullPath.substring(startIndex);
+	    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+	        filename = filename.substring(1);
+	    }
+	    if(filename.indexOf(".zip")<0){
+	    	document.getElementById('alr').style.backgroundColor = "red";
+			document.getElementById('alr').innerHTML="Il File deve essere .Zip";
+			document.getElementById('alr').removeAttribute('hidden');
+			setTimeout(function(){ document.getElementById('alr').hidden=true; }, 3000);
+	    	return false;
+	    }else{
+	    	return true;
+	    }
+	}else{
+		document.getElementById('alr').style.backgroundColor = "#FFBF18";
+		document.getElementById('alr').innerHTML="Selezionare un File";
+		document.getElementById('alr').removeAttribute('hidden');
+		setTimeout(function(){ document.getElementById('alr').hidden=true; }, 3000);
+		return false;
+	}
+    
+}
+
+function flags(){
+	var currentLocation = window.location.href;
+	var index =currentLocation.indexOf("?flag=1");
+	if(index>=0){
+		document.getElementById('alr').style.backgroundColor = "green";
+		document.getElementById('alr').innerHTML="File Aggiunto Correttamente";
+		document.getElementById('alr').removeAttribute('hidden');
+		setTimeout(function(){ document.getElementById('alr').hidden=true; }, 3000);
+		history.pushState({}, null, "/upload/");
+	}
+}
+
+function tempAlert(msg,duration){
+ 	var el = document.createElement("div");
+ 	el.setAttribute("style","position:absolute;top:5%;right:0.5%;background-color:black;");
+ 	el.innerHTML = msg;
+ 	setTimeout(function(){
+  	el.parentNode.removeChild(el);
+ 	},duration);
+ 	document.body.appendChild(el);
+}
+</script>
+</html>
